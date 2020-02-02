@@ -5,9 +5,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+
+import com.android.hit.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
 import android.view.View;
@@ -15,8 +17,6 @@ import android.view.ViewAnimationUtils;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.android.rivchat.R;
 import com.android.rivchat.data.StaticConfig;
 
 import java.util.regex.Matcher;
