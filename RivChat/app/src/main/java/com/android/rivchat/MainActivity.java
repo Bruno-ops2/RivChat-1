@@ -147,15 +147,18 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 ServiceUtils.stopServiceFriendChat(MainActivity.this.getApplicationContext(), false);
                 if (adapter.getItem(position) instanceof FriendsFragment) {
-                    floatButton.setVisibility(View.VISIBLE);
+                    //floatButton.setVisibility(View.VISIBLE);
+                    floatButton.show();
                     floatButton.setOnClickListener(((FriendsFragment) adapter.getItem(position)).onClickFloatButton.getInstance(MainActivity.this));
                     floatButton.setImageResource(R.drawable.plus);
                 } else if (adapter.getItem(position) instanceof GroupFragment) {
-                    floatButton.setVisibility(View.VISIBLE);
+                    //floatButton.setVisibility(View.VISIBLE);
+                    floatButton.show();
                     floatButton.setOnClickListener(((GroupFragment) adapter.getItem(position)).onClickFloatButton.getInstance(MainActivity.this));
                     floatButton.setImageResource(R.drawable.ic_float_add_group);
                 } else {
-                    floatButton.setVisibility(View.GONE);
+                    //floatButton.setVisibility(View.GONE);
+                    floatButton.hide();
                 }
             }
 
