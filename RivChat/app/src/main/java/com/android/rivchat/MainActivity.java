@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if(toolbar != null) {
             setSupportActionBar(toolbar);
-            getSupportActionBar().setTitle("RivChat");
+            getSupportActionBar().setTitle("HITChat");
         }
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);

@@ -191,23 +191,17 @@ public class FriendsFragment extends Fragment implements SwipeRefreshLayout.OnRe
                     .setMessage("Enter friend email")
                     .setIcon(R.drawable.ic_add_friend)
                     .setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS)
-                    .setInputFilter("Email not found", new LovelyTextInputDialog.TextFilter() {
-                        @Override
-                        public boolean check(String text) {
-                            Pattern VALID_EMAIL_ADDRESS_REGEX =
-                                    Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
-                            Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(text);
-                            return matcher.find();
-                        }
+                    .setInputFilter("Email not found", text -> {
+                        Pattern VALID_EMAIL_ADDRESS_REGEX =
+                                Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+                        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(text);
+                        return matcher.find();
                     })
-                    .setConfirmButton(android.R.string.ok, new LovelyTextInputDialog.OnTextInputConfirmListener() {
-                        @Override
-                        public void onTextInputConfirmed(String text) {
-                            //Tim id user id
-                            findIDEmail(text);
-                            //Check xem da ton tai ban ghi friend chua
-                            //Ghi them 1 ban ghi
-                        }
+                    .setConfirmButton(android.R.string.ok, text -> {
+                        //Tim id user id
+                        findIDEmail(text);
+                        //Check xem da ton tai ban ghi friend chua
+                        //Ghi them 1 ban ghi
                     })
                     .show();
         }
