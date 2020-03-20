@@ -3,10 +3,10 @@ RivChat is a example for chat app base on Google Firebase, messages are delivere
 
 ### Truely Developed by Kumar Shivam
 *** Follow me in my insta ***
-https://www.instagram.com/they_named_shivam/?hl=en
+* https://www.instagram.com/they_named_shivam/?hl=en
 
 *** My LinkedIn ***
-https://www.linkedin.com/in/shivam-sharma-855589160/
+* https://www.linkedin.com/in/shivam-sharma-855589160/
 
 
 ### RivChat
